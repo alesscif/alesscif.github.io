@@ -1,0 +1,93 @@
+body {
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+    text-align: center;
+    padding: 60px;
+}
+
+nav {
+    display: block;
+    padding: 90px;
+}
+
+.link {
+    width: 9px;
+    margin: 4px auto;
+    padding: 8px;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+} 
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: lightblue;
+    opacity: 0;
+    transition: opacity 200ms, transform 200ms;
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+.link:hover::after,
+.link:focus::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#home {
+    width: 9px;
+    margin: 4px auto;
+    padding: 8px;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+#home::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: lightblue;
+}
+
+#pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+header {
+    display: block;
+    font-size:30px;
+}
+
+#bio {
+    max-width: 500px;
+    margin: auto;
+}
+
+#resumeButton {
+    margin: 40px auto;
+    padding: 8px 40px;
+    background-color: white;
+    border: 1.5px solid lightblue;
+    border-radius: 4px;
+}
+#resumeButton:hover {
+    background-color: lightcyan;
+    transition-duration: 400ms;
+}
+
+
